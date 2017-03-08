@@ -14,7 +14,7 @@ class SongListItem extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.songs.songs.map(this.renderSong)}
+          {this.props.songs.map(this.renderSong)}
         </tbody>
       </table>
     )
@@ -25,7 +25,7 @@ class SongListItem extends Component {
     const albumName = songData.album.name;
     const popularity = songData.popularity;
     const songID = songData.id
-    
+
     return(
       <tr key={songID}>
         <td>{songName}</td>
@@ -38,7 +38,8 @@ class SongListItem extends Component {
 }
 
 function mapStateToProps(state){
-  return state;
+  debugger;
+  return {songs: state.songs};
 }
 
 export default connect(mapStateToProps)(SongListItem);
