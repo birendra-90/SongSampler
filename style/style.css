@@ -1,0 +1,44 @@
+/* GLOBAL */
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(30,215,96);
+}
+
+/* TITLE */
+
+#title {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
+
+.spotify-img {
+  max-width: 10%;
+}
+
+.app-name {
+  font-size: 3em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* FORM */
+
+form {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.form-group > label,
+.form-group > input {
+  margin-right: 1em;
+}
+
+.btn-default {
+  background-color: rgb(30,215,96);
+  color: rgb(0,0,0);
+}
