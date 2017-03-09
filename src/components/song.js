@@ -4,19 +4,9 @@ import {connect} from 'react-redux';
 class Song extends Component {
   render() {
     return (
-      <table className='table table-hover'>
-        <thead>
-          <tr>
-            <th>Song Name</th>
-            <th>Album Name</th>
-            <th>Popularity</th>
-            <th>Preview</th>
-          </tr>
-        </thead>
         <tbody>
           {this.props.songs.map(this.renderSong)}
         </tbody>
-      </table>
     )
   }
 
