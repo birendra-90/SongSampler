@@ -19,3 +19,10 @@ export const fetchSongs = (artist_name) => {
     });
   };
 };
+
+export const setTerm = (term) => {
+  return {
+    type: 'SET_TERM',
+    payload: term
+  };
+};
