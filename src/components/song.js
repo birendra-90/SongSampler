@@ -10,7 +10,7 @@ class Song extends Component {
             <th>Song Name</th>
             <th>Album Name</th>
             <th>Popularity</th>
-            <th>Song ID</th>
+            <th>Preview</th>
           </tr>
         </thead>
         <tbody>
@@ -24,14 +24,18 @@ class Song extends Component {
     const songName = songData.name;
     const albumName = songData.album.name;
     const popularity = songData.popularity;
-    const songID = songData.id
+    const songPreview = songData.preview_url
 
     return(
-      <tr key={songID}>
+      <tr key={songPreview}>
         <td>{songName}</td>
         <td>{albumName}</td>
         <td>{popularity}</td>
-        <td>{songID}</td>
+        <td>
+          <video controls name="media">
+            <source src={songPreview} type="audio/mpeg"></source>
+          </video>
+        </td>
       </tr>
     )
   }
