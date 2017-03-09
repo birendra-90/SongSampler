@@ -1,11 +1,24 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-export default class SearchBar extends Component {
+import {fetchSongs} from '../actions/index';
+
+class SearchBar extends Component {
   render() {
     return (
       <div>
-        <input></input>
+        <form onSubmit={this.onFormSubmit.bind(this)}>
+          <input></input>
+          <button type="submit">Search</button>
+        </form>
       </div>
     )
   }
+
+  onFormSubmit(event) {
+    event.preventDefault();
+    this.props.fetchSongs('Sia');
+  }
 }
+
+export default connect(null, {fetchSongs})(SearchBar);

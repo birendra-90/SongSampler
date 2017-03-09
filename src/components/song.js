@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-class SongListItem extends Component {
+class Song extends Component {
   render() {
     return (
       <table className='table table-hover'>
@@ -38,8 +38,7 @@ class SongListItem extends Component {
 }
 
 function mapStateToProps(state){
-  debugger;
   return {songs: state.songs};
 }
 
-export default connect(mapStateToProps)(SongListItem);
+export default connect(mapStateToProps)(Song);

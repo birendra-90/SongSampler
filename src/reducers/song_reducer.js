@@ -1,8 +1,8 @@
-export default function(state = {}, action){
+export default function(songs = [], action){
   switch(action.type){
     case 'FETCH_SONGS':
-      return {...state.songs, songs: action.payload.tracks};
+      return action.payload.tracks.map(song => {return song});
     default:
-      return state;
+      return songs;
   }
 }

@@ -1,21 +1,12 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import Song from './song';
 
-import {fetchSongs} from '../actions/index';
-import SongListItem from './song';
-
-class SongList extends Component {
-  componentWillMount() {
-    this.props.fetchSongs('Sia');
-  }
-
+export default class SongList extends Component {
   render() {
     return (
       <div>
-        <SongListItem />
+        <Song />
       </div>
     );
   }
 }
-
-export default connect(null, {fetchSongs})(SongList);
