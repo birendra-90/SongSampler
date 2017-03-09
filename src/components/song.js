@@ -14,17 +14,18 @@ class Song extends Component {
     const songName = songData.name;
     const albumName = songData.album.name;
     const popularity = songData.popularity;
-    const songPreview = songData.preview_url
+    const songPreview = songData.preview_url;
+    const songURL = songData.external_urls.spotify;
 
     return(
       <tr key={songPreview}>
-        <td>{songName}</td>
+        <td><a href={songURL} target="_blank">{songName}</a></td>
         <td>{albumName}</td>
         <td>{popularity}</td>
         <td>
-          <video controls name="media">
+          <audio controls name="media">
             <source src={songPreview} type="audio/mpeg"></source>
-          </video>
+          </audio>
         </td>
       </tr>
     )
