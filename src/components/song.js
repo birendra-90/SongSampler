@@ -4,19 +4,9 @@ import {connect} from 'react-redux';
 class Song extends Component {
   render() {
     return (
-      <table className='table table-hover'>
-        <thead>
-          <tr>
-            <th>Song Name</th>
-            <th>Album Name</th>
-            <th>Popularity</th>
-            <th>Song ID</th>
-          </tr>
-        </thead>
         <tbody>
           {this.props.songs.map(this.renderSong)}
         </tbody>
-      </table>
     )
   }
 
@@ -24,14 +14,19 @@ class Song extends Component {
     const songName = songData.name;
     const albumName = songData.album.name;
     const popularity = songData.popularity;
-    const songID = songData.id
+    const songPreview = songData.preview_url;
+    const songURL = songData.external_urls.spotify;
 
     return(
-      <tr key={songID}>
-        <td>{songName}</td>
+      <tr key={songPreview}>
+        <td><a href={songURL} target="_blank">{songName}</a></td>
         <td>{albumName}</td>
         <td>{popularity}</td>
-        <td>{songID}</td>
+        <td>
+          <audio controls name="media">
+            <source src={songPreview} type="audio/mpeg"></source>
+          </audio>
+        </td>
       </tr>
     )
   }

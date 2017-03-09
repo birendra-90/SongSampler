@@ -5,7 +5,17 @@ export default class SongList extends Component {
   render() {
     return (
       <div>
-        <Song />
+        <table className='table'>
+          <thead>
+            <tr>
+              <th>Song Name</th>
+              <th>Album Name</th>
+              <th>Popularity</th>
+              <th>Preview</th>
+            </tr>
+          </thead>
+          <Song />
+        </table>
       </div>
     );
   }

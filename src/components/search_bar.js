@@ -7,19 +7,21 @@ import {setTerm} from '../actions/index';
 class SearchBar extends Component {
   render() {
     return (
-      <form className="form-inline">
-        <div className="form-group" onSubmit={this.onFormSubmit.bind(this)}>
-          <label htmlFor="artist-search">Artist:</label>
-          <input
-            type="text"
-            className="form-control"
-            onChange={this.onInputChange.bind(this)}
-            id="artist-search"
-            placeholder="Search for an artist">
-          </input>
-          <button className="btn btn-default" type="submit">Search</button>
-        </div>
-      </form>
+      <div>
+        <form className="form-inline" onSubmit={this.onFormSubmit.bind(this)}>
+          <div className="form-group">
+            <label htmlFor="artist-search">Artist:</label>
+            <input
+              type="text"
+              className="form-control"
+              onChange={this.onInputChange.bind(this)}
+              id="artist-search"
+              placeholder="Search for an artist">
+            </input>
+            <button className="btn btn-default" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
     )
   }
 
