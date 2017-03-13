@@ -23628,7 +23628,7 @@
 	              _react2.default.createElement(
 	                'th',
 	                null,
-	                'Preview'
+	                'Sample'
 	              )
 	            )
 	          ),
